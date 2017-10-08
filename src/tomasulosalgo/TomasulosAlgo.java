@@ -11,7 +11,7 @@ public class TomasulosAlgo {
     public static void main(String[] args) {
         
         String fileName = "tomasulo.txt";
-        int numInstr, numCycles = 0, currentCycle = 0;
+        int numInstr = 0, numCycles = 0, currentCycle = 0;
         int opCode, destOp, sourceOp1, sourceOp2 = 0;
         ArrayQueue<Instruction> instrHold = new ArrayQueue<>(10);
         int[] RF = new int[8];
@@ -58,9 +58,10 @@ public class TomasulosAlgo {
         }
         
         //-------------------------------------------------------------
-        System.out.println("\nInitial RF and RAT: \n");
-        pf.printRFRAT(RF, RAT);
         pf.printRS(rsArray);
+        pf.printRFRAT(RF, RAT);
+        pf.printInstructionQueue(instrHold, numInstr);
+        
         
         for(int k = 0; k < numCycles; k++){
             

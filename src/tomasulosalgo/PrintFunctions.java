@@ -28,6 +28,28 @@ public class PrintFunctions {
         
     }
     
+    public void printInstructionQueue(ArrayQueue<Instruction> aq, int numInstr){
+        System.out.println("Instruction Queue");
+        for(int i = 0; i < numInstr; i++){
+            switch (aq.observe(i).getOpCode()) {
+                case 0:
+                    System.out.println("Add R" + aq.observe(i).getDestOp()+ ", R" + aq.observe(i).getSourceOp1()+ ", R" + aq.observe(i).getSourceOp2()+ "\n");
+                    break;
+                case 1:
+                    System.out.println("Sub R" + aq.observe(i).getDestOp()+ ", R" + aq.observe(i).getSourceOp1()+ ", R" + aq.observe(i).getSourceOp2()+ "\n");
+                    break;
+                case 2:
+                    System.out.println("Mul R" + aq.observe(i).getDestOp()+ ", R" + aq.observe(i).getSourceOp1()+ ", R" + aq.observe(i).getSourceOp2()+ "\n");
+                    break;
+                case 3:
+                    System.out.println("Div R" + aq.observe(i).getDestOp()+ ", R" + aq.observe(i).getSourceOp1()+ ", R" + aq.observe(i).getSourceOp2()+ "\n");
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+    
     
     
 }
