@@ -11,12 +11,12 @@ public class TomasulosAlgo {
     public static void main(String[] args) {
         
         String fileName = "tomasulo.txt";
-        int numInstr, numCycles = 0;
+        int numInstr, numCycles = 0, currentCycle = 0;
         int opCode, destOp, sourceOp1, sourceOp2 = 0;
         ArrayQueue<Instruction> instrHold = new ArrayQueue<>(10);
         int[] RF = new int[8];
-        int[] RAT = new int[8];
-        
+        String[] RAT = new String[8];
+        PrintFunctions pf = new PrintFunctions();
         
         
         try {
@@ -45,6 +45,14 @@ public class TomasulosAlgo {
             System.out.println(
                 "Unable to open file '" + 
                 fileName + "'");                
+        }
+        
+        //-------------------------------------------------------------
+        System.out.println("\nInitial RF and RAT: \n");
+        pf.printRFRAT(RF, RAT);
+        for(int k = 0; k < numCycles; k++){
+            
+           
         }
         
         
