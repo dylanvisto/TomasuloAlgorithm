@@ -18,6 +18,16 @@ public class PrintFunctions {
         
     }
     
+    public void printRS(ReservationStation[] rs){
+        System.out.println("_________________________________________________________________\n");
+        System.out.println("       Busy     OP       VJ       VK       Qj       Qk       Disp\n");
+        for(int i = 0; i <5; i++){
+        System.out.println("RS" + i + "    " + rs[i].toString());
+        }
+        System.out.println("_________________________________________________________________\n");
+        
+    }
+    
     
     
 }

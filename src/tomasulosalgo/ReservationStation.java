@@ -3,13 +3,11 @@ package tomasulosalgo;
 
 public class ReservationStation {
     
-    Boolean Busy, Disp;
-    String Op, Qj, Qk;
-    int Vj, Vk;
+    String Op, Qj, Qk, Vj, Vk, Busy, Disp;
     
     public ReservationStation(){}
     
-    public ReservationStation(Boolean Busy, String Op, int Vj, int Vk, String Qj, String Qk, Boolean Disp){
+    public ReservationStation(String Busy, String Op, String Vj, String Vk, String Qj, String Qk, String Disp){
         this.Busy = Busy;
         this.Op = Op;
         this.Vj = Vj;
@@ -18,22 +16,6 @@ public class ReservationStation {
         this.Qk = Qk;
         this.Disp = Disp;
         
-    }
-
-    public Boolean getBusy() {
-        return Busy;
-    }
-
-    public void setBusy(Boolean Busy) {
-        this.Busy = Busy;
-    }
-
-    public Boolean getDisp() {
-        return Disp;
-    }
-
-    public void setDisp(Boolean Disp) {
-        this.Disp = Disp;
     }
 
     public String getOp() {
@@ -60,25 +42,43 @@ public class ReservationStation {
         this.Qk = Qk;
     }
 
-    public int getVj() {
+    public String getVj() {
         return Vj;
     }
 
-    public void setVj(int Vj) {
+    public void setVj(String Vj) {
         this.Vj = Vj;
     }
 
-    public int getVk() {
+    public String getVk() {
         return Vk;
     }
 
-    public void setVk(int Vk) {
+    public void setVk(String Vk) {
         this.Vk = Vk;
     }
 
+    public String getBusy() {
+        return Busy;
+    }
+
+    public void setBusy(String Busy) {
+        this.Busy = Busy;
+    }
+
+    public String getDisp() {
+        return Disp;
+    }
+
+    public void setDisp(String Disp) {
+        this.Disp = Disp;
+    }
+
+    
+
     @Override
     public String toString() {
-        return "ReservationStation{" + "Busy=" + Busy + ", Disp=" + Disp + ", Op=" + Op + ", Qj=" + Qj + ", Qk=" + Qk + ", Vj=" + Vj + ", Vk=" + Vk + '}';
+        return  Busy + "        "  +  Op + "      " + Vj + "       " + Vk  + "       " + Qj + "      " + Qk + "       " + Disp;
     }
     
     
