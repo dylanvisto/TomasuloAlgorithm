@@ -4,10 +4,11 @@ package tomasulosalgo;
 public class ReservationStation {
     
     String Op, Qj, Qk, Vj, Vk, Busy, Disp;
+    int Matcher;
     
     public ReservationStation(){}
     
-    public ReservationStation(String Busy, String Op, String Vj, String Vk, String Qj, String Qk, String Disp){
+    public ReservationStation(String Busy, String Op, String Vj, String Vk, String Qj, String Qk, String Disp, int Matcher){
         this.Busy = Busy;
         this.Op = Op;
         this.Vj = Vj;
@@ -15,7 +16,16 @@ public class ReservationStation {
         this.Qj = Qj;
         this.Qk = Qk;
         this.Disp = Disp;
+        this.Matcher = Matcher;
         
+    }
+
+    public int getMatcher() {
+        return Matcher;
+    }
+
+    public void setMatcher(int Matcher) {
+        this.Matcher = Matcher;
     }
 
     public String getOp() {

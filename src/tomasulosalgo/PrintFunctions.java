@@ -19,12 +19,16 @@ public class PrintFunctions {
         
     }
     
-    public void printRS(ReservationStation[] rs){
+    public void printRS(ReservationStation rs1, ReservationStation rs2, ReservationStation rs3, ReservationStation rs4, ReservationStation rs5){
         System.out.println("_________________________________________________________________");
         System.out.println("       Busy     OP       VJ       VK       Qj       Qk       Disp");
-        for(int i = 0; i <5; i++){
-        System.out.println("RS" + i + "    " + rs[i].toString());
-        }
+        
+        System.out.println("RS" + 1 + "    " + rs1.toString());
+        System.out.println("RS" + 2 + "    " + rs2.toString());
+        System.out.println("RS" + 3 + "    " + rs3.toString());
+        System.out.println("RS" + 4 + "    " + rs4.toString());
+        System.out.println("RS" + 5 + "    " + rs5.toString());
+        
         System.out.println("_________________________________________________________________");
         System.out.println();
     }
