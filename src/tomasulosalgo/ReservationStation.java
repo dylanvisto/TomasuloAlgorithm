@@ -88,7 +88,7 @@ public class ReservationStation {
 
     @Override
     public String toString() {
-        return  Busy + "        "  +  Op + "      " + Vj + "       " + Vk  + "       " + Qj + "      " + Qk + "       " + Disp;
+        return  Busy + "        "  +  Op + "      " + Vj + "        " + Vk  + "       " + Qj + "      " + Qk + "       " + Disp;
     }
     
     
