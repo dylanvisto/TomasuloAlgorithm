@@ -1,5 +1,7 @@
-package tomasulosalgo;
+//Dylan Visto; Julian Thrash
+//Interface that is implemented in the ArrayQueue class
 
+package tomasulosalgo;
 
 public interface Queue<E> {
     

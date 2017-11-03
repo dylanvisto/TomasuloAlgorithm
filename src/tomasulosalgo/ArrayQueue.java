@@ -1,5 +1,7 @@
-package tomasulosalgo;
+//Dylan Visto; Julian Thrash
+//The Array Queue class that is used to store the instructions
 
+package tomasulosalgo;
 
 public class ArrayQueue<E> implements Queue<E> {
     public static final int CAPACITY = 1000;

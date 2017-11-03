@@ -1,3 +1,5 @@
+//Dylan Visto; Julian Thrash
+//Class that corresponds to a reservation station
 
 package tomasulosalgo;
 

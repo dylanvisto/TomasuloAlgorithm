@@ -1,8 +1,56 @@
+//Dylan Visto; Julian Thrash
+//Different print functions that are used to properly display the simulation in the console
 
 package tomasulosalgo;
 
 public class PrintFunctions {
     
+    
+      //Prints off the cycles in which each instruction is Issued, Dispatched, and Written Back 
+    public void printInstInfo(ArrayQueue<Instruction> aq, int numInstr, int[] issue, int[] dispatch, int[] write) 
+    {
+        System.out.println("_________________________________________________________________\n");
+        System.out.println("Instruction        Issue       Dispatch/EX     Write Back");
+        //Does this operation for the total number of instructions 
+        for(int i = 0; i < numInstr; i++){
+            //Case switch: Gets the opcode for each instruction and depending on the type it will print off the instruction and its cycles
+            switch (aq.observe(i).getOpCode()) {
+                //Add instruction 
+                case 0:
+                    System.out.print("Add R" + aq.observe(i).getDestOp()+ ", R" + aq.observe(i).getSourceOp1()+ ", R" + aq.observe(i).getSourceOp2() + "       ");
+                    System.out.print(issue[i] + "             ");//Print Issue
+                    System.out.print((dispatch[i]) + "              ");// Print Dispatch
+                    System.out.println(write[i]); //Print Broadcast
+                    break;
+                //Subtraction instruction    
+                case 1:
+                    System.out.print("Sub R" + aq.observe(i).getDestOp()+ ", R" + aq.observe(i).getSourceOp1()+ ", R" + aq.observe(i).getSourceOp2() + "       ");
+                    System.out.print(issue[i] + "            ");//Print Issue
+                    System.out.print((dispatch[i]) + "              ");// Print Dispatch
+                    System.out.println(write[i]);//Print Broadcast
+                    break;
+                case 2:
+                    System.out.print("Mul R" + aq.observe(i).getDestOp()+ ", R" + aq.observe(i).getSourceOp1()+ ", R" + aq.observe(i).getSourceOp2() + "       ");
+                    System.out.print(issue[i] + "             ");//Print Issue
+                    System.out.print((dispatch[i]) + "              ");// Print Dispatch
+                    System.out.println(write[i]);//Print Broadcast
+                    break;
+                case 3:
+                    System.out.print("Div R" + aq.observe(i).getDestOp()+ ", R" + aq.observe(i).getSourceOp1()+ ", R" + aq.observe(i).getSourceOp2() + "       ");
+                    System.out.print(issue[i] + "            ");//Print Issue
+                    System.out.print((dispatch[i]) + "              ");// Print Dispatch
+                    System.out.println(write[i]);//Print Broadcast
+                    break;
+                default:
+                    break;
+            }
+        }
+        System.out.println("_________________________________________________________________");
+        System.out.println();
+    }
+    
+    
+    //Function to print the RF and RAT
     public void printRFRAT(int[] RF, String[] RAT){
         
         System.out.println("   RF                   RAT");
@@ -19,6 +67,7 @@ public class PrintFunctions {
         
     }
     
+    //Function to print off the Reservations stations
     public void printRS(ReservationStation rs1, ReservationStation rs2, ReservationStation rs3, ReservationStation rs4, ReservationStation rs5){
         System.out.println("_________________________________________________________________");
         System.out.println("       Busy     OP       VJ       VK       Qj       Qk       Disp");
@@ -93,6 +142,7 @@ public class PrintFunctions {
         System.out.println("This is length of vk" + rs1.getVj().length());
     }
     
+    //Functions to print off the queue
     public void printInstructionQueue(ArrayQueue<Instruction> aq, int numInstr){
         System.out.println("Instruction Queue");
         for(int i = 0; i < numInstr; i++){
@@ -115,6 +165,10 @@ public class PrintFunctions {
         }
         System.out.println();
     }
+    
+  
+    
+    
     
     
     

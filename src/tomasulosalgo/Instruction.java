@@ -1,3 +1,5 @@
+//Dylan Visto; Julian Thrash
+//Class that corresponds to an instruction
 
 package tomasulosalgo;
 
@@ -14,8 +16,6 @@ public class Instruction {
         this.sourceOp1 = sourceOp1;
         this.sourceOp2 = sourceOp2;
         this.Matcher = Matcher;
-        
-        
     }
 
     public int getMatcher() {
