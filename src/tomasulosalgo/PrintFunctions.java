@@ -139,7 +139,6 @@ public class PrintFunctions {
         
         System.out.println("_________________________________________________________________");
         System.out.println();
-        System.out.println("This is length of vk" + rs1.getVj().length());
     }
     
     //Functions to print off the queue

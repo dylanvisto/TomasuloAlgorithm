@@ -73,7 +73,6 @@ public class TomasulosAlgo {
         //Printing the initial RAT, RF, and INSTRUCTION QUEUE
         System.out.println("Initial RAT, RF, and Instruction Queue");
         pf.printRFRAT(RF, RAT);
-        pf.printInstructionQueue(instrHold, numInstr);
          
         
         
@@ -299,6 +298,7 @@ public class TomasulosAlgo {
         //---------------Cycle Arrays Done (Issue, Execute, Write)---------------//
         
             //Prints off the cycle diagram
+            System.out.println("The cycle diagram for Issue, Execute, and Write");
             pf.printInstInfo(instrHold, numInstr, issue, execute, write); 
         
         
@@ -380,10 +380,10 @@ public class TomasulosAlgo {
                 }
             }
             
-            //Checks for empty cycles
-            if(activeCycle != 1){
-                System.out.println("Cycle " + i + " was empty"); 
-            }
+            //Checks for empty cycles (uncomment if you want to see empty cycles
+//            if(activeCycle != 1){
+//                System.out.println("Cycle " + i + " was empty"); 
+//            }
             
             //Clears Reservations stations depending on the value of rsClear
             switch (rsClear) {
